@@ -1,4 +1,4 @@
-const endOfSam = new Date(2022, 12, 22)
+const endOfSam = new Date('2022-12-22T00:00:00');
 
 function timeUntil( date ){
     let now = date.getTime();
@@ -8,12 +8,29 @@ function timeUntil( date ){
     let days;
     let hours;
     let mins;
-    let secs;
-    if (totalSec > 86400){
-        days = Math.floor(totalSec / 86400);
-        totalSec = totalSec % 86400;
-    }
-    
-    console.log()
+    days = Math.floor(totalSec / 86400);
+    totalSec -= days*86400;
+    hours = Math.floor(totalSec / 3600)-1;
+    totalSec -= hours*3600;
+    mins = Math.floor(totalSec / 60);
+    totalSec -= mins*60;
+    // console.log(days);
+    // console.log(hours);
+    // console.log(mins);
+    // console.log(totalSec);
+    return {
+        days: days,
+        hours: hours,
+        minutes: mins,
+        seconds: Math.floor(totalSec)
+    };
 }
 
+function runFunc(){
+    let curTime = new Date();
+    let resTime = timeUntil(curTime);
+    const resultElement = document.getElementById("timerContent");
+    resultElement.innerText = `Days: ${resTime.days}, Hours: ${resTime.hours}, Minutes: ${resTime.minutes}, Seconds: ${resTime.seconds}`;
+}
+
+setInterval(runFunc, 1000); 

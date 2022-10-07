@@ -52,58 +52,7 @@ div.content {
 div.box {
     margin-left: auto;
     margin-right: auto;
-    wid
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    th: 25vw;
+    width: 25vw;
     height: auto;
     margin-bottom: 5vh;
     padding: 2vw;
@@ -140,7 +89,7 @@ img#picture {
     max-width: 25%;
     margin-left: auto;
     margin-right: 10vw;
-    margin-top: 5vh;
+    margin-top: 12vh;
 }
 
 .contactList {
