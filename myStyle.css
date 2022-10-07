@@ -16,7 +16,14 @@ a.navigate {
 /* 
     css for myAboutMe.html
 */
-body{
+@font-face {
+    font-family: 'Silkscreen-Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: url('./Silkscreen/Silkscreen-Regular.ttf');
+}
+
+body{ 
     margin: 0;
     background-color: #C6C1AE;
 }
@@ -31,7 +38,7 @@ iframe {
 }
 
 h1.name {
-    font-family: Papyrus, "Lucida Handwriting", fantasy;
+    font-family: 'Silkscreen-Regular';
     font-size: 5em;
     text-align: center;
 }

@@ -10,8 +10,9 @@ function timeUntil( date ){
     let mins;
     days = Math.floor(totalSec / 86400);
     totalSec -= days*86400;
-    hours = Math.floor(totalSec / 3600)-1;
+    hours = Math.floor(totalSec / 3600);
     totalSec -= hours*3600;
+    hours--;
     mins = Math.floor(totalSec / 60);
     totalSec -= mins*60;
     // console.log(days);
@@ -22,7 +23,7 @@ function timeUntil( date ){
         days: days,
         hours: hours,
         minutes: mins,
-        seconds: Math.floor(totalSec)
+        seconds: Math.round(totalSec)
     };
 }
 
